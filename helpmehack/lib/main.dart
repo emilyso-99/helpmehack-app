@@ -109,17 +109,48 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
+      initialRoute: '/',
+      routes: {
+        '/buildawebsite': (BuildContext context) => WebsitePage(),
+      },
       home: Scaffold(
         appBar: AppBar(title: const Text(_title)),
-        body: MyStatelessWidget(),
+        body: HomePage(),
       ),
     );
   }
 }
 
-/// This is the stateless widget that the main application instantiates.
-class MyStatelessWidget extends StatelessWidget {
-  MyStatelessWidget({Key key}) : super(key: key);
+// This is the stateless widget that the main application instantiates.
+class HomePage extends StatelessWidget {
+  HomePage({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('/buildawebsite');
+            },
+            child:
+                const Text('Build a Website!', style: TextStyle(fontSize: 20)),
+          ),
+          const SizedBox(height: 30),
+          RaisedButton(
+              onPressed: () {},
+              child:
+                  const Text('Build an app!', style: TextStyle(fontSize: 20))),
+        ],
+      ),
+    );
+  }
+}
+
+class WebsitePage extends StatelessWidget {
+  WebsitePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -129,14 +160,13 @@ class MyStatelessWidget extends StatelessWidget {
         children: <Widget>[
           RaisedButton(
             onPressed: () {},
-            child:
-                const Text('Example Project 1', style: TextStyle(fontSize: 20)),
+            child: const Text('Hello!', style: TextStyle(fontSize: 20)),
           ),
           const SizedBox(height: 30),
           RaisedButton(
               onPressed: () {},
-              child: const Text('Example Project 2',
-                  style: TextStyle(fontSize: 20))),
+              child:
+                  const Text('Build an app!', style: TextStyle(fontSize: 20))),
         ],
       ),
     );
