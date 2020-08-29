@@ -7,6 +7,17 @@ class TextGame extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       children: <Widget>[
         Container(
+          color: Colors.blue,
+          margin: new EdgeInsets.only(bottom: 120),
+          height: 50,
+            child: Material(
+                child: InkWell(
+                    onTap: () {},
+                    child: Center(child: Text('So You Want to Build a Text Game?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)))
+                )
+            )
+        ),
+        Container(
           margin: new EdgeInsets.symmetric(horizontal: 120.0, vertical: 10.0),
           height: 50,
           color: Colors.amber[600],
