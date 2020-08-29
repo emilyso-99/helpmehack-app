@@ -53,16 +53,21 @@ class HomePage extends StatelessWidget {
           height: 200,
         )
       ]),
-      Container(color: Colors.white, height: 200, alignment: Alignment.center),
-      Container(
-          child: Center(
-              child: Text(
-                  "Welcome to HelpMeHack, a place to help you start your first project, and find like minded coders!! ",
-                  style: TextStyle(
-                      fontFamily: "Comfortaa",
-                      fontSize: 30,
-                      color: Colors.deepPurple),
-                  textAlign: TextAlign.center)))
+      Container(height: 200, alignment: Alignment.center),
+      Center(
+          child: Stack(children: [
+        Container(
+            color: Colors.deepPurple,
+            alignment: Alignment.center,
+            child: Container(
+                alignment: Alignment.center,
+                color: Colors.deepPurple,
+                width: 1000,
+                height: 500,
+                child: Text(
+                    "Welcome to HelpMeHack! We're excited for you to start coding and meet like-minded people to make amazing projects! Click on the navbar to find projects, hackathons and expand your coding brain!",
+                    style: TextStyle(fontSize: 50, color: Colors.white))))
+      ]))
     ])));
   }
 }
