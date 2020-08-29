@@ -111,17 +111,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
-      initialRoute: '/',
-      routes: {
-        '/buildawebsite': (BuildContext context) => WebsitePage(),
-        '/makeagame': (BuildContext context) => TextGame()
-      },
-      home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
-        body: HomePage(),
-      ),
-    );
+        title: _title,
+        initialRoute: '/',
+        routes: {
+          '/buildawebsite': (BuildContext context) => WebsitePage(),
+          '/makeagame': (BuildContext context) => TextGame()
+        },
+        home: HomePage());
   }
 }
 
