@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
+import 'website/website.dart';
+import 'homepage.dart';
 
 class BasicAppBarSample extends StatefulWidget {
   @override
@@ -122,53 +127,3 @@ class MyApp extends StatelessWidget {
 }
 
 // This is the stateless widget that the main application instantiates.
-class HomePage extends StatelessWidget {
-  HomePage({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          RaisedButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed('/buildawebsite');
-            },
-            child:
-                const Text('Build a Website!', style: TextStyle(fontSize: 20)),
-          ),
-          const SizedBox(height: 30),
-          RaisedButton(
-              onPressed: () {},
-              child:
-                  const Text('Build an app!', style: TextStyle(fontSize: 20))),
-        ],
-      ),
-    );
-  }
-}
-
-class WebsitePage extends StatelessWidget {
-  WebsitePage({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          RaisedButton(
-            onPressed: () {},
-            child: const Text('Hello!', style: TextStyle(fontSize: 20)),
-          ),
-          const SizedBox(height: 30),
-          RaisedButton(
-              onPressed: () {},
-              child:
-                  const Text('Build an app!', style: TextStyle(fontSize: 20))),
-        ],
-      ),
-    );
-  }
-}
