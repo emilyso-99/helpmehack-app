@@ -3,7 +3,7 @@ class TextGame extends StatelessWidget {
   @override
 
   Widget build(BuildContext context) {
-    ListView(
+   return ListView(
       padding: const EdgeInsets.all(8),
       children: <Widget>[
         Container(
@@ -39,6 +39,7 @@ class TextGame extends StatelessWidget {
         ),
       ],
     );
+
   }
 }
 
