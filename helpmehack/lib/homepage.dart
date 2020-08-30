@@ -1,6 +1,5 @@
 // This is the stateless widget that the main application instantiates.
 import 'package:flutter/material.dart';
-import "navbar.dart";
 
 class HomePage extends StatelessWidget {
   HomePage({Key key}) : super(key: key);
@@ -64,33 +63,6 @@ class HomePage extends StatelessWidget {
             ]),
           ],
         ),
-        ButtonBar(alignment: MainAxisAlignment.spaceEvenly, children: [
-          ButtonTheme(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/buildawebsite');
-              },
-              child: const Text('Build a Website!',
-                  style: TextStyle(fontSize: 40)),
-            ),
-            minWidth: 400,
-            height: 200,
-          ),
-          ButtonTheme(
-            child: RaisedButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/makeagame');
-                },
-                child: const Text(
-                  'Build an app!',
-                  style: TextStyle(fontSize: 20),
-                  textAlign: TextAlign.center,
-                )),
-            minWidth: 400,
-            height: 200,
-          )
-        ]),
-        Container(height: 200, alignment: Alignment.center),
         Center(
             child: Stack(children: [
           Container(
@@ -104,7 +76,60 @@ class HomePage extends StatelessWidget {
                   child: Text(
                       "Welcome to HelpMeHack! We're excited for you to start coding and meet like-minded people to make amazing projects! Click on the navbar to find projects, hackathons and expand your coding brain!",
                       style: TextStyle(fontSize: 50, color: Colors.white))))
-        ]))
+        ])),
+        Center(
+            child: Stack(children: [
+          Container(
+              child: Text("\nBUILD\n",
+                  style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontSize: 70,
+                      fontWeight: FontWeight.w700),
+                  textAlign: TextAlign.center))
+        ])),
+        Center(child: Image(image: AssetImage("lib/images/web dev.png"))),
+        Container(
+          color: Colors.deepPurple,
+          alignment: Alignment.center,
+          child: Container(
+              width: 1000,
+              height: 200,
+              child: Text(
+                "\nHackMeHelp was made to provide coders with an efficient and fun way to improve their coding skills!" +
+                    " Our team realized that traditional coding environments usually provide lessons as separate languages, making it hard to combine all your skills when you want to make a project." +
+                    " Whether you are wanting to build a gorgeous website or learn how to store information in a database, there's something for everyone!",
+                style: TextStyle(fontSize: 24, color: Colors.white),
+                textAlign: TextAlign.center,
+              )),
+        ),
+        Center(
+            child: Stack(children: [
+          Container(
+              child: Text("\nCONNECT\n",
+                  style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontSize: 70,
+                      fontWeight: FontWeight.w700),
+                  textAlign: TextAlign.center))
+        ])),
+        Center(
+            child: Image(
+                image: AssetImage(
+                    "lib/images/640x396 Attention Content Hackathon Table_tcm98-4044427_tcm98-2750236-32.jpg"))),
+        Container(height: 100),
+        Container(
+            color: Colors.deepPurple,
+            alignment: Alignment.center,
+            child: Container(
+                width: 1000,
+                height: 200,
+                child: Text(
+                  "\nHackMeHelp was made to provide coders with an efficient and fun way to improve their coding skills!" +
+                      " Our team realized that traditional coding environments usually provide lessons as separate languages, making it hard to combine all your skills when you want to make a project." +
+                      " Whether you are wanting to build a gorgeous website or learn how to store information in a database, there's something for everyone!",
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                  textAlign: TextAlign.center,
+                )))
       ])),
     );
   }
