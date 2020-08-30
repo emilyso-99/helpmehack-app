@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
                       ))),
               FlatButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/buildawebsite');
+                    Navigator.of(context).pushNamed('/hackathons');
                   },
                   child: Text("CONNECT\t \t",
                       style: TextStyle(
@@ -134,4 +134,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
