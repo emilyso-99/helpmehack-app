@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+void main() => runApp(MyApp())
 const styler = TextStyle(
     fontFamily: 'Comfortaa',
     fontWeight: FontWeight.w300,
