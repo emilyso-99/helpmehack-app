@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'website/website.dart';
 import 'homepage.dart';
 import "textgame/textgame.dart";
-import "projects.dart";
-import "databases.dart";
 
 class BasicAppBarSample extends StatefulWidget {
   @override
@@ -117,9 +115,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/buildawebsite': (BuildContext context) => WebsitePage(),
-          '/makeagame': (BuildContext context) => TextGame(),
-          '/projects': (BuildContext context) => ProjectPage(),
-          '/databases': (BuildContext context) => DatabasePage()
+          '/makeagame': (BuildContext context) => TextGame()
         },
         home: HomePage());
   }
