@@ -16,27 +16,33 @@ class WebsitePage extends StatelessWidget {
       body: SingleChildScrollView(
           child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
         AppBar(
-          title: CenterHorizontal(Text("Building a Website!",
-              style: TextStyle(
-                  fontFamily: 'Comfortaa',
-                  fontWeight: FontWeight.w600,
-                  fontSize: 48))),
-          backgroundColor: Colors.deepPurple,
+            title: CenterHorizontal(Text("Building a Website!",
+                style: TextStyle(
+                    fontFamily: 'Comfortaa',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 48))),
+            backgroundColor: Colors.deepPurple,
+            toolbarHeight: 150),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+                image: AssetImage("lib/images/seven-grams-coffee.png"),
+                alignment: Alignment.center),
+          ],
         ),
         Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [Colors.deepPurple, Colors.white])),
-            child: Text("\n\n\n")),
-        Container(
-            color: Colors.white,
-            child: Text("Websites are fun!", style: styler)),
-        Image(
-            image: AssetImage("lib/images/seven-grams-coffee.png"),
-            alignment: Alignment.center),
+          width: 700,
+          height: 300,
+          child: Text(
+            "Look how pretty this site is!! This was probably done through a generator (i.e. SquareSpace), but you can definitely create something similar using computer programming tools!",
+            style: TextStyle(
+                fontFamily: 'Comfortaa',
+                fontSize: 36,
+                color: Colors.deepPurple),
+            textAlign: TextAlign.center,
+          ),
+        ),
         ExpansionTile(
           title: CenterHorizontal(
               Text("\nStep 1:Making it Pretty \n", style: styler)),

@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/buildawebsite');
+                    Navigator.of(context).pushNamed('/projects');
                   },
                   child: Text("BUILD\t \t",
                       style: TextStyle(
