@@ -35,7 +35,7 @@ class WebsitePage extends StatelessWidget {
             color: Colors.white,
             child: Text("Websites are fun!", style: styler)),
         Image(
-            image: AssetImage("lib/website/images/seven-grams-coffee.png"),
+            image: AssetImage("lib/images/seven-grams-coffee.png"),
             alignment: Alignment.center),
         ExpansionTile(
           title: CenterHorizontal(
@@ -73,15 +73,16 @@ Size screenSize(BuildContext context) {
 double screenHeight(BuildContext context, {double dividedBy = 1}) {
   return screenSize(context).height / dividedBy;
 }
+
 Widget textSection = Container(
   padding: const EdgeInsets.all(32),
   child: Text(
     'How can we help? '
-        'HelpUsHack provides you with resources such as hackathon websites, videos '
-        'to help you learn, and portals to guide you to where you need to be as a beginner! '
-        'Above, you can build a website or app! Feel free to use this website to your extent '
-        'with hand-picked resources to guide your passion. Our purpose serves to focus on getting you '
-        'to grow as a person learning and as a hacker! Most importantly, have fun future hackers!',
+    'HelpUsHack provides you with resources such as hackathon websites, videos '
+    'to help you learn, and portals to guide you to where you need to be as a beginner! '
+    'Above, you can build a website or app! Feel free to use this website to your extent '
+    'with hand-picked resources to guide your passion. Our purpose serves to focus on getting you '
+    'to grow as a person learning and as a hacker! Most importantly, have fun future hackers!',
     softWrap: true,
   ),
 );
